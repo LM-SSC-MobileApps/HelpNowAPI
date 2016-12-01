@@ -74,8 +74,9 @@ var routes = function(){
             ).then(function(eventLocations) {
                 var resultString = '';
                 eventLocations.sort(function(a, b) {
-                    return parseFloat(a.LONG) - parseFloat(b.LONG);
+                    return a.EventID - b.EventID;
                 });
+                resultString += "Bounds\n";
                 eventLocations.forEach(function(el){
                     resultString += boundingbox.getBoundingBox([parseFloat(el.LAT), parseFloat(el.LONG)], el.Radius) +'\n';
                     // boxes.push(boundingbox.getBoundingBox([parseFloat(el.LAT), parseFloat(el.LONG)], el.Radius))
