@@ -17,8 +17,8 @@ var proxy = require('express-http-proxy');
 var app = express();
 
 var environment = process.env.ENVIRONMENT || 'qas';
-var port = process.env.PORT || 80;
-var ssl_port = process.env.SSL_PORT || 443;
+var port = process.env.PORT || 9000;
+var ssl_port = process.env.SSL_PORT || 9443;
 var enable_redirect = process.env.ENABLE_REDIRECT || true;
 
 
